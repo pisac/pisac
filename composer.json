@@ -1,0 +1,43 @@
+{
+  "name": "pisac/pisac",
+  "description": "...",
+  "keywords": [
+    "..."
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexandr Chernyaev",
+      "email": "bliz48rus@gmail.com",
+      "homepage": "https://tabuna.github.io",
+      "role": "Developer"
+    }
+  ],
+  "bin": [
+    "bin/pisac"
+  ],
+  "require": {
+    "ext-json": "*",
+    "illuminate/console": "^8.0",
+    "illuminate/events": "^8.0",
+    "illuminate/collections": "^8.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.4",
+    "symfony/var-dumper": "^5.0",
+    "vimeo/psalm": "^4.6"
+  },
+  "autoload": {
+    "classmap": [
+      "commands"
+    ],
+    "psr-4": {
+      "Pisac\\Commit\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pisac\\Tests\\": "tests/"
+    }
+  }
+}

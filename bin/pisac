@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Illuminate\Console\Application;
+use Illuminate\Container\Container;
+use Illuminate\Events\Dispatcher;
+use Pisac\Commit\Scope;
+
+define('VERSION', '0.0.1');
+$container = new Container;
+$container->singleton(Scope::class);
+
+$events = new Dispatcher($container);
+
+$artisan = new Application($container, $events, 'Version ' . VERSION);
+$artisan->setName('Pisac');
+
+// Bind a command
+$artisan->resolve(Check::class);
+
+$artisan->run();

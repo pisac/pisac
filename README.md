@@ -46,9 +46,7 @@ TODO:
 
 ## Phar
 
-Sometimes your project can conflict with one or more of Pisac dependencies. In that case, you may find the Phar (a self-contained PHP executable) useful.
-
-The Phar can be downloaded from GitHub:
+Sometimes your project can conflict with one or more of Pisac dependencies. In that case, you may find the Phar (a self-contained PHP executable) useful. The Phar can be downloaded from GitHub:
 
 ```bash
 TODO:

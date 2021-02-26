@@ -52,11 +52,9 @@ The Phar can be downloaded from GitHub:
 
 ```bash
 TODO:
-``
+```
 
-## Composer
-
-You can also install it as a composer dependency (Not recommended):
+You can also install it as a composer dependency **(Not recommended)**:
 
 ```bash
 $ composer require pisac/pisac

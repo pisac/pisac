@@ -70,7 +70,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Maintainers
 
-Sajya is developed and maintained by [Alexandr Chernyaev](https://github.com/tabuna).
+Pisac is developed and maintained by [Alexandr Chernyaev](https://github.com/tabuna).
 
 ## License
 

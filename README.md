@@ -26,9 +26,9 @@ To configure the validation rules, you need to create a new file called `pisac.j
 }
 ```
 
-## Github Actions
+## GitHub Actions
 
-You can use it as a Github Actions by creating a file `.github/workflows/pisac.yml` with the following content:
+You can use it as a GitHub Actions by creating a file `.github/workflows/pisac.yml` with the following content:
 
 ```yaml
 TODO:
@@ -46,7 +46,13 @@ TODO:
 
 ## Phar
 
+Sometimes your project can conflict with one or more of Pisac dependencies. In that case, you may find the Phar (a self-contained PHP executable) useful.
+
+The Phar can be downloaded from GitHub:
+
+```bash
 TODO:
+``
 
 ## Composer
 

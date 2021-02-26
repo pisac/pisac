@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Pisac\Commit;
 
 use Composer\Autoload\ClassLoader;
@@ -54,9 +56,10 @@ class Scope
     /**
      * @param string $path
      *
-     * @return Scope
      * @throws \JsonException
      * @throws \Throwable
+     *
+     * @return Scope
      */
     public function setPath(string $path): self
     {

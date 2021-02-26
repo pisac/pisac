@@ -1,0 +1,13 @@
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+
+name: 'Pisac'
+author: 'Alexandr Chernyaev'
+description: 'Keep git commit histories clean.'
+
+branding:
+    icon: 'message-square'
+    color: 'white'
+
+runs:
+    using: 'docker'
+    image: 'docker://...'

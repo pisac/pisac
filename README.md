@@ -26,6 +26,44 @@ To configure the validation rules, you need to create a new file called `pisac.j
 }
 ```
 
+## Github Actions
+
+You can use it as a Github Actions by creating a file `.github/workflows/pisac.yml` with the following content:
+
+```yaml
+TODO:
+```
+
+## Docker
+
+A Docker-Image is built automatically and located here:https://hub.docker.com/r/...
+
+You can run it in any given directory like this:
+
+```bash
+TODO:
+```
+
+## Phar
+
+TODO:
+
+## Composer
+
+You can also install it as a composer dependency (Not recommended):
+
+```bash
+$ composer require pisac/pisac
+```
+
+And then run as executable:
+
+```bash
+$ php vendor/bin/pisac check
+```
+
+
+
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.

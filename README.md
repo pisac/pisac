@@ -52,12 +52,12 @@ Sometimes your project can conflict with one or more of Pisac dependencies. In t
 TODO:
 ```
 
-Alternatively  **(Not recommended)**, you can also install Pisac as part of your development dependencies. You will likely want to use the require-dev section to exclude phar-composer in your production environment.
+Alternatively  **(Not recommended)**, you can also install Pisac as part of your development dependencies. You will likely want to use the require-dev section to exclude Pisac in your production environment.
 
 You can either modify your `composer.json` manually or run the following command to include the latest tagged release:
 
 ```bash
-$ composer require pisac/pisac
+$ composer require --dev pisac/pisac
 ```
 
 And then run as executable:

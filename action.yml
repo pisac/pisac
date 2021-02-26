@@ -10,4 +10,4 @@ branding:
 
 runs:
     using: 'docker'
-    image: 'docker://...'
+    image: 'docker.pkg.github.com/pisac/pisac/pisac:latest'

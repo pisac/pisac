@@ -7,4 +7,34 @@ Commits are one of the key parts of a Git repository, and more so, the commit me
 #### Git commit history is very easy to mess up, here's how you can fix it!
 
 
-**Pisac** is added to your CI, and when they commit description failed validation, an error occurs.
+**Pisac** is added to your CI, and when they commit description failed validation, an error occurs. Usually, everyone in the project gets an error message, so you can stop your friends from writing a bad description.
+
+
+## Configuration
+
+To configure the validation rules, you need to create a new file called `pisac.json` in the project root. For example:
+
+```json
+{
+  "pattern": "(Added|Changed|Deprecated|Removed|Fixed|Security) \\w+",
+  "message": "The commit must start with words (Added|Changed|Deprecated|Removed|Fixed|Security)",
+  "limit": 5,
+  "skip": [
+    "Fix styling",
+    "Initial commit"
+  ]
+}
+```
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Maintainers
+
+Sajya is developed and maintained by [Alexandr Chernyaev](https://github.com/tabuna).
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+

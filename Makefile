@@ -5,5 +5,7 @@ help:
 build: ## build project
 	composer i --ignore-platform-reqs
 	php --define phar.readonly=0 compile.php
-	docker build -t docker.pkg.github.com/pisac/pisac/pisac:latest .
-	docker push docker.pkg.github.com/pisac/pisac/pisac:latest
+	docker build -t mamau/pisac:latest .
+	docker push mamau/pisac
+#	docker build -t docker.pkg.github.com/pisac/pisac/pisac:latest .
+#	docker push docker.pkg.github.com/pisac/pisac/pisac:latest

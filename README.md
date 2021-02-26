@@ -36,7 +36,7 @@ TODO:
 
 ## Docker
 
-A Docker-Image is built automatically and located here:https://hub.docker.com/r/...
+A Docker-Image is built automatically and located here: https://hub.docker.com/r/...
 
 You can run it in any given directory like this:
 

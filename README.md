@@ -7,7 +7,7 @@ Commits are one of the critical parts of a Git repository, and more so, the comm
 #### Git commits history is straightforward to mess up. Here's how you can fix it!
 
 
-**Pisac** is added to your CI, and when they commit description failed validation, an error occurs. Usually, everyone in the project gets an error message, so you can stop your friends from writing the ugly story.
+**Pisac** is added to your CI, and when they commit description failed validation, an error occurs. Usually, everyone in the project gets an error message, so you can stop your friends from writing the ugly story. 😈
 
 
 ## Configuration

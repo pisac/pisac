@@ -21,7 +21,7 @@ try {
     $defaultStub = $phar->createDefaultStub('bin/pisac');
 
     // Add the rest of the apps files
-    $phar->buildFromDirectory(__DIR__.'/application');
+    $phar->buildFromDirectory(__DIR__);
 
     // Customize the stub to add the shebang
     $stub = "#!/usr/bin/env php \n".$defaultStub;

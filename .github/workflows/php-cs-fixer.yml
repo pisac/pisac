@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Dl pisac
+      - name: Checkout code
         uses: docker://mamau/pisac
         
   php-cs-fixer:

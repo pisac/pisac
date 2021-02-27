@@ -51,7 +51,7 @@ jobs:
           coverage: none
           tools: composer:v2
       - name: Install 👀
-        run: composer global require "pisac/pisac:0.*" -q --no-ansi --no-interaction --no-scripts --no-progress
+        run: composer global require "pisac/pisac:0.*" -q -n
       - name: Execute 🔧
         run: pisac check
 ```

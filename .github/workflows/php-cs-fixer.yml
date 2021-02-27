@@ -7,8 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout code
+      - name: Check commit
         uses: docker://mamau/pisac
+        
+      - name: Check message
+        uses: docker://mamau/pisac check
         
   php-cs-fixer:
     runs-on: ubuntu-latest

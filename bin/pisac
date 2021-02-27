@@ -1,7 +1,22 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+$dir = __DIR__.'/..';
+
+if (!file_exists($dir.'/autoload.php')) {
+    $dir = __DIR__.'/../vendor';
+}
+
+if (!file_exists($dir.'/autoload.php')) {
+    $dir = __DIR__.'/../../..';
+}
+
+if (!file_exists($dir.'/autoload.php')) {
+    echo 'Autoload not found.';
+    exit(1);
+}
+
+require $dir.'/autoload.php';
 
 use Illuminate\Console\Application;
 use Illuminate\Container\Container;
@@ -20,4 +35,6 @@ $artisan->setName('Pisac');
 // Bind a command
 $artisan->resolve(Check::class);
 
-$artisan->run();
+$status = $artisan->run();
+
+exit($status);

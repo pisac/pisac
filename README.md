@@ -44,15 +44,11 @@ You can run it in any given directory like this:
 TODO:
 ```
 
-## Phar
+## Composer
 
-Sometimes your project can conflict with one or more of Pisac dependencies. In that case, you may find the Phar (a self-contained PHP executable) useful. The Phar can be downloaded from GitHub:
+> **Not recommended.** Sometimes your project can conflict with one or more of Pisac dependencies.
 
-```bash
-TODO:
-```
-
-Alternatively  **(Not recommended)**, you can also install Pisac as part of your development dependencies. You will likely want to use the require-dev section to exclude Pisac in your production environment. You can either modify your `composer.json` manually or run the following command to include the latest tagged release:
+Alternatively, you can also install Pisac as part of your development dependencies. You will likely want to use the require-dev section to exclude Pisac in your production environment. You can either modify your `composer.json` manually or run the following command to include the latest tagged release:
 
 ```bash
 $ composer require --dev pisac/pisac
@@ -63,8 +59,6 @@ And then run as executable:
 ```bash
 $ php vendor/bin/pisac check
 ```
-
-
 
 ## Contributing
 

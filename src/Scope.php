@@ -24,8 +24,10 @@ class Scope
      */
     public function __construct()
     {
-        $reflection = new \ReflectionClass(ClassLoader::class);
-        $this->path = dirname($reflection->getFileName(), 3);
+        //$reflection = new \ReflectionClass(ClassLoader::class);
+        //$this->path = dirname($reflection->getFileName(), 3);
+
+        $this->path = getcwd();
 
         $this->init();
     }

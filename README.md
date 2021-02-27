@@ -30,8 +30,10 @@ To configure the validation rules, you need to create a new file called `pisac.j
 
 A regular expression that will be used to check messages. Here are some popular suggestions:
 
-```php
-TODO:
+```
+"(Create|Update|Delete) .*"                                          // Update README.md
+"(Added|Changed|Deprecated|Removed|Fixed|Security) .*"               // Changed README.md
+"refs #[0-9]+ (Added|Changed|Deprecated|Removed|Fixed|Security) .*"  // refs #123 Changed README.md
 ```
 
 #### Message

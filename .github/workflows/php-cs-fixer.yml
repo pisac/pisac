@@ -18,7 +18,7 @@ jobs:
           args: --config=.php_cs.dist --allow-risky=yes
       
       - name: Run pisac image
-        uses: docker://mamau/pisac:latest
+        uses: docker://mamau/pisac
         
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4

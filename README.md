@@ -37,15 +37,23 @@ on: [ push ]
 
 jobs:
   pisac-cheker:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
-          
-      - name: Pisac
-        uses: pisac/pisac@0.0.6
+      - name: Setup PHP 🔧
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.0
+          extensions: mbstring
+          coverage: none
+          tools: composer:v2
+      - name: Install 👀
+        run: composer global require "pisac/pisac:0.*" -q --no-ansi --no-interaction --no-scripts --no-progress
+      - name: Execute 🔧
+        run: pisac check
 ```
 
 ## Composer

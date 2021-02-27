@@ -1,28 +1,22 @@
 #!/usr/bin/env php
 <?php
 
-foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
-    if (file_exists($file)) {
-        define('PISAC_COMPOSER_INSTALL', $file);
+$dir = __DIR__.'/..';
 
-        break;
-    }
+if (!file_exists($dir.'/autoload.php')) {
+    $dir = __DIR__.'/../vendor';
 }
 
-unset($file);
-
-if (!defined('PISAC_COMPOSER_INSTALL')) {
-    fwrite(
-        STDERR,
-        'You need to set up the project dependencies using Composer:' . PHP_EOL . PHP_EOL .
-        '    composer install' . PHP_EOL . PHP_EOL .
-        'You can learn all about Composer on https://getcomposer.org/.' . PHP_EOL
-    );
-
-    die(1);
+if (!file_exists($dir.'/autoload.php')) {
+    $dir = __DIR__.'/../../..';
 }
 
-require PISAC_COMPOSER_INSTALL;
+if (!file_exists($dir.'/autoload.php')) {
+    echo 'Autoload not found.';
+    exit(1);
+}
+
+require $dir.'/autoload.php';
 
 use Illuminate\Console\Application;
 use Illuminate\Container\Container;

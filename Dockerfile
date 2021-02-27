@@ -1,5 +1,12 @@
 FROM php:8.0.2-alpine
 
-COPY ./pisac.phar .
+COPY . /application
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+RUN apk add --no-cache git
 
-ENTRYPOINT ["/pisac.phar"]
+WORKDIR /application
+
+RUN composer i
+RUN chmod +x bin/pisac
+
+ENTRYPOINT ["bin/pisac"]

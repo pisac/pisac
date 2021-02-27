@@ -26,6 +26,31 @@ To configure the validation rules, you need to create a new file called `pisac.j
 }
 ```
 
+#### Pattern
+
+A regular expression that will be used to check messages.
+
+#### Message
+
+The message will be displayed if the message does not match the template. It is good practice to show an example of how to describe
+
+#### Limit
+
+Indicates how many messages in history Pisac should check. Don't use too many.
+
+#### Skip
+
+A set of words or their combinations, if present, you need to skip the check. Example:
+
+```json
+"skip": [
+  "Initial commit",
+  "Build",
+  "Skip"
+]
+```
+
+
 ## GitHub Actions
 
 You can use it as a GitHub Actions by creating a file `.github/workflows/pisac.yml` with the following content:

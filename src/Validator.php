@@ -30,12 +30,12 @@ class Validator
      */
     public function check(string $string): bool
     {
-        $commit = Str::of($string);
-
-        if ($commit->contains($this->scope->getSkipWords())) {
+        if (Str::contains($string, $this->scope->getSkipWords())) {
             return true;
         }
 
-        return Str::of($string)->is($this->scope->getPattern());
+        preg_match_all('/' . $this->scope->getPattern() . '/um', $string, $matches);
+
+        return isset($matches[0]) && $matches[0] === $string;
     }
 }

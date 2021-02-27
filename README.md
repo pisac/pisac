@@ -16,7 +16,7 @@ To configure the validation rules, you need to create a new file called `pisac.j
 
 ```json
 {
-  "pattern": "(Added|Changed|Deprecated|Removed|Fixed|Security) \\w+",
+  "pattern": "(Added|Changed|Deprecated|Removed|Fixed|Security) .*",
   "message": "The commit must start with words (Added|Changed|Deprecated|Removed|Fixed|Security)",
   "limit": 5,
   "skip": [

@@ -26,7 +26,7 @@ class Scope
     {
         //$reflection = new \ReflectionClass(ClassLoader::class);
         //$this->path = dirname($reflection->getFileName(), 3);
-        
+
         $this->path = getcwd();
 
         $this->init();

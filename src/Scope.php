@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Pisac\Commit;
 
-use Composer\Autoload\ClassLoader;
 use Illuminate\Support\Collection;
 
 class Scope
@@ -24,9 +23,6 @@ class Scope
      */
     public function __construct()
     {
-        //$reflection = new \ReflectionClass(ClassLoader::class);
-        //$this->path = dirname($reflection->getFileName(), 3);
-
         $this->path = getcwd();
 
         $this->init();

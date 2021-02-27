@@ -9,5 +9,18 @@ branding:
     color: 'white'
 
 runs:
-    using: 'docker'
-    image: 'docker://docker.pkg.github.com/pisac/pisac/pisac:latest'
+  using: "composite"
+  steps:
+    - name: Setup PHP 🔧
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 7.4
+        extensions: mbstring, zip
+        coverage: none
+        tools: composer:v2
+
+    - name: Install 👀
+      run: composer global require "pisac/pisac:0.0.5" --with-all-dependencies
+
+    - name: Execute 🔧
+      run: pisac check

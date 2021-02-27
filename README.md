@@ -31,8 +31,21 @@ To configure the validation rules, you need to create a new file called `pisac.j
 You can use it as a GitHub Actions by creating a file `.github/workflows/pisac.yml` with the following content:
 
 ```yaml
-- name: Pisac
-  uses: pisac/pisac@0.0.6
+name: Pisac
+
+on: [ push ]
+
+jobs:
+  pisac-cheker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          
+      - name: Pisac
+        uses: pisac/pisac@0.0.6
 ```
 
 ## Composer

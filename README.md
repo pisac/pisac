@@ -28,11 +28,15 @@ To configure the validation rules, you need to create a new file called `pisac.j
 
 #### Pattern
 
-A regular expression that will be used to check messages.
+A regular expression that will be used to check messages. Here are some popular suggestions:
+
+```php
+TODO:
+```
 
 #### Message
 
-The message will be displayed if the message does not match the template. It is good practice to show an example of how to describe
+The message will be displayed if the message does not match the template. It is good practice to show an example of how to describe.
 
 #### Limit
 

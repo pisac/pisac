@@ -7,6 +7,7 @@ RUN apk add --no-cache git
 WORKDIR /application
 
 RUN composer i
-RUN chmod +x bin/pisac
+RUN chmod a+x bin/pisac
+RUN chmod a+x entrypoint.sh
 
-ENTRYPOINT ["bin/pisac"]
+ENTRYPOINT ["/application/entrypoint.sh"]

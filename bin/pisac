@@ -35,4 +35,6 @@ $artisan->setName('Pisac');
 // Bind a command
 $artisan->resolve(Check::class);
 
-$artisan->run();
+$status = $artisan->run();
+
+exit($status);

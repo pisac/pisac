@@ -31,17 +31,8 @@ To configure the validation rules, you need to create a new file called `pisac.j
 You can use it as a GitHub Actions by creating a file `.github/workflows/pisac.yml` with the following content:
 
 ```yaml
-TODO:
-```
-
-## Docker
-
-A Docker-Image is built automatically and located here: https://hub.docker.com/r/...
-
-You can run it in any given directory like this:
-
-```bash
-TODO:
+- name: Pisac
+  uses: pisac/pisac@0.0.6
 ```
 
 ## Composer

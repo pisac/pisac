@@ -16,8 +16,13 @@ jobs:
         uses: docker://oskarstark/php-cs-fixer-ga
         with:
           args: --config=.php_cs.dist --allow-risky=yes
-
+      
+      - name: Run pisac image
+        uses: docker://mamau/pisac
+        
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Fix styling
+          
+          

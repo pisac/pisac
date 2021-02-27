@@ -1,5 +1,5 @@
 {
-  "pattern": "(Added|Changed|Deprecated|Removed|Fixed|Security) \\w+",
+  "pattern": "(Added|Changed|Deprecated|Removed|Fixed|Security) .*",
   "message": "The commit must start with words (Added|Changed|Deprecated|Removed|Fixed|Security)",
   "limit": 1,
   "skip": [

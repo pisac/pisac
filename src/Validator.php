@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Pisac\Commit;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
 class Validator
@@ -36,6 +37,6 @@ class Validator
 
         preg_match_all('/' . $this->scope->getPattern() . '/um', $string, $matches);
 
-        return isset($matches[0]) && $matches[0] === $string;
+        return Arr::first($matches[0] ?? []) === $string;
     }
 }
